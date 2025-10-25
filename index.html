@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio — Multi-sticky navbars</title>
+
+    <!-- Your stylesheet (add this) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+
+    <!-- HOOFD NAVBAR (fixed tot na intro) -->
+    <header class="nav" id="siteNav" role="navigation" aria-label="Hoofdnavigatie">
+      <div class="nav__inner">
+        <a href="#home" class="brand" data-scroll>
+          <span class="brand__logo" aria-hidden="true"></span>
+          <span>Mijn Portfolio</span>
+        </a>
+        <nav class="nav__links">
+          <a class="nav__link" href="#Intro" data-scroll>Introductie</a>
+          <a class="nav__link" href="#werk" data-scroll>Mijn werk</a>
+          <a class="nav__link" href="#contact" data-scroll>Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO/HEADER FOTO -->
+    <!-- INTRO -->
+    <section class="section section--intro" id="Intro" aria-label="Introductie">
+      <img src="Img/Noa.JPG" alt="Volledige breedte foto" class="fullwidth-img" id="home">
+
+      <div class="wrap">
+        <h1>Introductie</h1>
+        <p class="lede">
+          Beste lezer, welkom in mijn portfolio. Mijn naam is Noa van Dieten en momenteel studeer ik op het Grafisch lyceum in Rotterdam.
+          Mijn plan is om mijn diploma te halen voor redactiemedewerker en dan door te studeren op de opleiding Film op de Hogeschool voor de Kunsten Utrecht.
+          Als het gaat om schrijven, verhalen bedenken en content maken dan ligt daar mijn passie. In dit portfolio neem ik u mee met mijn ervaringen en laat ik u mijn passie zien.
+          Ofwel: mijn gedachtes en ideeën omzetten in realiteit! Op deze school heb ik erg veel geleerd en nieuwe ervaringen opgedaan.
+          Met trots presenteer ik het dan ook aan u.
+        </p>
+      </div>
+      <div id="release-point" aria-hidden="true"></div>
+    </section>
+
+    <!-- MIJN WERK (hele blok; stickybar blijft tot het einde van dit blok) -->
+    <section class="section section--with-subnav" id="werk" aria-label="Mijn werk">
+      <div class="wrap">
+
+        <!-- SUBNAV #1 -->
+        <div class="stickybar" data-stickybar id="workSubnav" role="navigation" aria-label="Werk navigatie">
+          <div class="stickybar__inner">
+            <a href="#Intro" class="brand" data-scroll>
+              <span class="brand__logo" aria-hidden="true"></span>
+              <span>Mijn Portfolio</span>
+            </a>
+
+            <nav class="stickybar__links">
+              <!-- Dropdown: Instarts -->
+              <div class="dropdown">
+                <button type="button" class="stickybar__link dropdown__toggle"
+                        data-dropdown-toggle aria-expanded="false" aria-controls="dd-instarts">
+                  Instarts ▾
+                </button>
+                <div id="dd-instarts" class="dropdown__menu" role="menu" aria-label="Instarts">
+                  <a class="dropdown__item" href="#bedenken" data-scroll role="menuitem">Instarts bedenken</a>
+                  <a class="dropdown__item" href="#I1" data-scroll role="menuitem">Instart 1</a>
+                  <a class="dropdown__item" href="#I2" data-scroll role="menuitem">Instart 2</a>
+                </div>
+              </div>
+
+              <!-- Dropdown: Interviews -->
+              <div class="dropdown">
+                <button type="button" class="stickybar__link dropdown__toggle"
+                        data-dropdown-toggle aria-expanded="false" aria-controls="dd-interviews">
+                  Interviews ▾
+                </button>
+                <div id="dd-interviews" class="dropdown__menu" role="menu" aria-label="Interviews">
+                  <a class="dropdown__item" href="#Introinter" data-scroll role="menuitem">Intro</a>
+                </div>
+              </div>
+
+              <!-- Dropdown: Sociale media -->
+              <div class="dropdown">
+                <button type="button" class="stickybar__link dropdown__toggle"
+                        data-dropdown-toggle aria-expanded="false" aria-controls="dd-social">
+                  Sociale media ▾
+                </button>
+                <div id="dd-social" class="dropdown__menu" role="menu" aria-label="Sociale media">
+                  <a class="dropdown__item" href="#bedenken" data-scroll role="menuitem">Intro</a>
+                  <a class="dropdown__item" href="#S1" data-scroll role="menuitem">Opdracht 1</a>
+                  <a class="dropdown__item" href="#S2" data-scroll role="menuitem">Opdracht 2</a>
+                  <a class="dropdown__item" href="#S3" data-scroll role="menuitem">Opdracht 3</a>
+                </div>
+              </div>
+
+              <!-- Directe links binnen 'Mijn werk' -->
+              <a href="#M" class="brand" data-scroll>Magazine</a>
+              <a href="#Boek" class="brand" data-scroll>Mijn boek</a>
+              <a href="#Foto" class="brand" data-scroll>Fotografie</a>
+              <a href="#Short" class="brand" data-scroll>Short Movie</a>
+              <a href="#Cross" class="brand" data-scroll>Crossmediale campagne</a>
+              <a href="#Gedicht" class="brand" data-scroll>Gedichten</a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- ====== Content binnen #werk ====== -->
+
+        <section id="bedenken" aria-label="Instarts bedenken">
+          <h1>Instarts bedenken</h1>
+          <p class="lede">
+            Bij ons op school volg je twee themavakken. Je kan dan kiezen uit verschillende soorten vakken die je wil volgen.
+            Zoals televisie, documentairefotografie, magazine en radio. Voor de eerste periode heb ik gekozen voor televisie.
+            Bij televisie moest je ideeën bedenken voor de aflevering die je wilde maken. Laat nieuwe dingen bedenken nou net mijn specialiteit zijn.
+            Bij de eerste afleveringen moesten we gaan brainstormen zonder dat de docenten erbij waren. Ik had het voortouw genomen en pakte een pen.
+            Ik liet iedereen aan het woord om zijn of haar idee te vertellen en ik schreef het dan vervolgens op. Zelf had ik ook met een paar mensen bedacht om een sociaal experiment te doen dus die stond ook op ons lijstje.
+            Dit hebben wij uitgewerkt. We hebben bedacht om boeken te laten vallen en te kijken of mensen gingen helpen en hoe ze daarop reageerden.
+            Ik wilde graag de rol op mij nemen om de actrice te zijn. Op mij werd een bodycam bevestigd zodat we verschillende beelden konden krijgen.
+            Voor de tweede aflevering hebben we veel nagedacht over wat we gingen doen voor de muziek pop vox. Ik had bedacht dat wij een spel gingen maken dat mensen een stukje van een kerstliedje te horen kregen.
+            Vervolgens moesten ze raden welk liedje het was. Het idee was goedgekeurd door onze docent nadat ze ons nog wat feedback had gegeven dat we rekening moesten houden met Copyright
+            en dat we goed moesten nadenken over onze doelgroep. Ik wilde mijzelf uitdagen en besloot de presentator te worden van de instart.
+          </p>
+        </section>
+
+        <section id="I1" aria-label="Instart 1">
+          <h2>Instart 1</h2>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/VZqOsFc9SBA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </section>
+
+        <section id="I2" aria-label="Instart 2">
+          <h2>Instart 2</h2>
+          <p class="lede">
+            UITWERKING HIER!!!!!! 
+            Hier zie je de uitwerking van mijn idee.
+            Dit was de eerste keer dat ik ging presenteren. Dit vond ik spannend, maar ik wist dat ik dit prima kon.
+            Helaas hou ik de microfoon in de verkeerde hand waardoor ik een gesloten houding heb. Beginnersfoutje.
+            Heb er nu wel van geleerd om het in mijn goede hand te doen.
+          </p>
+
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/pnHSayIhu04"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <p>
+            Natuurlijk wilden wij onze aflevering promoten. Daarom hebben wij een TikTok video gemaakt zodat dit meer kijkers konden trekken.
+          </p>
+        </section>
+
+        <section id="Introinter" aria-label="Interviews">
+          <h1>Interviews</h1>
+          <p class="lede">
+            Interviewen is een groot hoofdstuk in de opleiding redactiemedewerker. Wij interviewen voor video's of voor tijdschrift/magazine.
+            Ook voor radio en podcast interviewen wij veel. Op straat afstappen op mensen moeten wij ook vaak doen.
+            In het algemeen komt u veel interviewen tegen in mijn gehele portfolio, maar ik zal hier nog een paar fragmentjes zetten.
+          </p>
+          <h2>Opdracht 1</h2>
+          <p>Ik heb een podcast gemaakt over vrouwenrechten. Hiervoor heb ik een mevrouw geïnterviewd (Marjo) die zelf in heel veel opstanden heeft meegelopen en ook veel weet over de acties van de Dolle Mina's. Voor deze opdracht had ik een 9.8 gekregen — erg blij mee.</p>
+
+          <p>Podcast:</p>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/3C6gBX3UxAU"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </section>
+
+        <h1>communicatie en sociale media content</h1>
+
+        <section id="S1" aria-label="Opdracht 1 — Social">
+          <h2>Opdracht 1</h2>
+          <p class="lede">
+            We moesten voor een opdracht een nieuws video maken. Voor mij is het milieu altijd erg belangrijk en heb ik dus gekozen met een vriend van mij om een nieuws video te maken over luchtverontreiniging. Hiervoor speelde ik een wetenschapper en ging mijn vriend mij interviewen. Ik vond het erg leuk om hierbij een edit te maken. Edit maken nou eenmaal veel indruk.
+            De video begint daarom ook met een edit die ik heb gemaakt.
+          </p>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/riJwa9AIyoA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p>Voor deze opdracht moesten wij ook een Storyboard maken.</p>
+          STORYBORD HIER!!!!!!!!!!!!!!!!!!!
+          <p>En er moest onderzoek naar dit onderwerp gedaan worden. Daarom had ik verschillende bronnen gezocht die ons veel informatie hier over konden geven. Ook had ik er een quote bij bedacht: The sky is not the limit.</p>
+          THE SKY IS NOT THE LIMIT HIER !!!!!!!!
+        </section>
+
+        <section id="S2">
+          <h2>Opdracht 2</h2>
+          <p>Bij een quote die je leuk vond moest je een bijpassende video maken. Dit deden we in groepjes van drie. Wij hadden gekozen voor de quote: Good Friends Don't Let you do stupid things... alone. Hierbij maakte we een video over onze vriendschap. Al deze scenes heb ik bedacht.</p>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/vIIZ9qbf94k"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </section>
+
+        <section id="S3">
+          <h2>Opdracht 3</h2>
+          <p>Een opdracht die ik heb gemaakt bij communicatie is een sociale mediacampagne. Ik had gekozen om dit in mijn eentje te doen, want ik wilde dit graag over mijn favoriete sport karate doen. De opdracht was content maken voor sociale media. Je moest doelen stellen die je uiteindelijk wilde behalen en afsluiten met een pecha kucha presentatie. Dat houdt in, een PowerPoint met alleen foto’s en video’s, zonder tekst.</p>
+          <h1>LOGO TIKTOK HIER!!!!!</h1>
+          <p>dit was ons logo</p>
+          <h1>HUISKLEUREN HIER!!!!!</h1>
+          <p>Hier vertelde ik over mijn huisstijl.</p>
+        </section>
+
+        <!-- ===== Magazine (nu binnen #werk) ===== -->
+        <section id="M" aria-label="Magazine">
+          <h1>MAGAZINE</h1>
+          <h1>MAGAZINE PDF LINK</h1>
+          <p>Ook heb ik het themavak magazine gedaan. Dit themavak hield in dat we twee of drie artikelen moesten schrijven waarvan 1 een interview was. Onze artikelen hebben wij ge-edit in Adobe InDesign.</p>
+          <p>Hier ziet u artikelen die ik zelf heb gemaakt, de eerste (Must listen to) op basis van een interview dat ik heb afgenomen.</p>
+          <p>Bij dit artikel wilde ik mensen informeren wat muziek met je doet tijdens het sporten. Ik heb hierbij zelf symbolen gemaakt.</p>
+        </section>
+
+        <!-- ===== Boek (nu binnen #werk) ===== -->
+        <section id="Boek" aria-label="Mijn boek">
+          <h1>Mijn Boek</h1>
+          <p>Ja, mijn boek. Daar vertel ik altijd met trots over. Met dit project ben ik al lang bezig. Er blijven maar nieuwe ideeën komen dus blijf ik maar door schrijven.</p>
+          <p>Mijn boek is fictie en speelt zich af in een oude tijd. Het verhaal begint bij twee karakters die met veel andere vastzitten op een kostschool...</p>
+          <p>Hier ziet u mijn moodboards van twee karakters:</p>
+        </section>
+
+        <!-- ===== Fotografie (nu binnen #werk) ===== -->
+        <section id="Foto" aria-label="Fotografie">
+          <h1>Fotografie</h1>
+          <p>Je kon een onderwerp kiezen dat documentairefotografie heet...</p>
+          <p>Sigarettenvervuiling: Op deze foto ziet u een berg sigaretten.</p>
+          <img src="Img/Cig.jpg" alt="Volledige breedte foto" class="fullwidth-img">
+          <p>Overvolle vuilnisbak: De vuilnisbakken hier zijn overvol en er waait veel weg</p>
+          <img src="Img/Vol.jpg" alt="Volledige breedte foto" class="fullwidth-img">
+          <p>Uiteindelijk heb ik al mijn foto's afgedrukt...</p>
+          <p>Opdracht: foto's maken van gebouwen: Het was een regenachtige dag...</p>
+          <img src="Img/Regen.JPG" alt="Volledige breedte foto" class="fullwidth-img">
+          <p>Opdracht: Lijnen zien</p>
+          <img src="Img/Trap.JPG" alt="Volledige breedte foto" class="fullwidth-img">
+          <p>Opdracht: Verboden toegang: plaatsen waar je niet mag komen.</p>
+          <img src="Img/Verboden.JPG" alt="Volledige breedte foto" class="fullwidth-img">
+          <img src="Img/Hand.JPG" alt="Volledige breedte foto" class="fullwidth-img">
+          <p>De wereld zien door één oog</p>
+          <img src="Img/Hond.JPG" alt="Volledige breedte foto" class="fullwidth-img">
+          <p>Opdracht: gezicht uitdrukking</p>
+          <img src="Img2/Oma.JPG" alt="Volledige breedte foto" class="fullwidth-img">
+          <img src="Img2/Opa.JPG" alt="Volledige breedte foto" class="fullwidth-img">
+        </section>
+
+        <!-- ===== Short Movie (nu binnen #werk) ===== -->
+        <section id="Short" aria-label="Short Movie">
+          <h1>Short Movie</h1>
+          <p>Het maken van een film: dat is iets wat ik heel leuk vind...</p>
+          <p>De Short movie:</p>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/LVRAcydm6U8"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <h2>Het Werk Erachter</h2>
+          <h3>Eerst ging ik het verhaal opzetten.</h3>
+          <h3>Short movie: Ik zal winnen</h3>
+          <h3>Het verhaal</h3>
+          <p>Twee jongens, één winnaar. Quin en Mick hebben beiden hun reden waarom ze willen winnen...</p>
+          <p>Mick staart Quin met zelfverzekerdheid en een grote druk op zijn schouders aan...</p>
+          <p>Verder heb ik al mijn aantekeningen op papier gemaakt...</p>
+          <h1>AANTEKINGEN PAPIER FOTO HIER!!!!!!!!!!!</h1>
+          <p>Waar ik tegen aanliep tijdens dit project was toch wel dat ik te veel tekst had...</p>
+          <h2>Inventarisen</h2>
+          <p>1. Als je het mapje opent zie je dat ik 3 verschillende dagen heb gefilmd...</p>
+          <p>2. Hier zie je alle scenes van dag 1</p>
+        </section>
+
+        <!-- ===== Crossmediale campagne (nu binnen #werk) ===== -->
+        <section id="Cross" aria-label="Crossmediale campagne">
+          <h1>Crossmediale campagne</h1>
+          <p>Een crossmediale campagne maken was een eindexamenopdracht...</p>
+          <h1>FOTO DE WERELD VAN FAST FASHION TITELPAGINA</h1>
+          <h1>PDF LINK CROSSMEDIALE CAMPAGNE</h1>
+          <p>Vervolgens moest je drie uitgebreide artikelen schrijven...</p>
+          <p>Hier de bijbehoren de video en callsheet/script</p>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/kkD4rCdLm5s?feature=share"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </section>
+
+        <!-- ===== Gedichten (nu binnen #werk) ===== -->
+        <section id="Gedicht" aria-label="Gedichten">
+          <h2>Gedicht 1 Uitleg</h2>
+          <p>Van jongs af aan is voor mij een ding altijd erg belangrijk...</p>
+
+          <h2>Gedicht 2 Uitleg</h2>
+          <p>Ik hou ervan om te leven...</p>
+
+          <h1>GEDICHTEN STUREN FOTOS</h1>
+          <h1>EINDE PORTFOLIO</h1>
+        </section>
+
+      </div> <!-- /wrap -->
+    </section> <!-- /#werk (einde van HELE mijn-werk blok) -->
+
+    <!-- CONTACT (apart blok met eigen stickybar, buiten #werk) -->
+    <section class="section section--with-subnav" id="contact" aria-label="Contact">
+      <div class="wrap">
+        <div class="stickybar" data-stickybar id="contactSubnav" role="navigation" aria-label="Contact navigatie">
+          <div class="stickybar__inner">
+            <strong class="stickybar__title">Contact</strong>
+            <nav class="stickybar__links">
+              <a class="stickybar__link" href="#mail" data-scroll>E-mail</a>
+              <a class="stickybar__link" href="#social" data-scroll>Social</a>
+            </nav>
+          </div>
+        </div>
+
+        <h2 class="h2">Contact</h2>
+        <div class="grid">
+          <article class="card" id="mail"><h3>E-mail</h3><p class="lede">mail@voorbeeld.nl</p></article>
+          <article class="card" id="social"><h3>Social</h3><p class="lede">@voorbeeld</p></article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">© <span id="y"></span> — Gemaakt door jou.</footer>
+
+    <script src="script.js" defer></script>
+
+
+    
+  </body>
+</html>

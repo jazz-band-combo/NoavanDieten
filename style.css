@@ -1,0 +1,189 @@
+section {
+margin-top:50px;
+}
+
+p {
+margin-top:10px;
+font-size: 10px;
+}
+h1 {
+margin-top:30px;
+  font-size: 40px;
+  font-family: "Merriweather", Georgia, "Times New Roman", serif;
+  font-weight: 700; /* bold for headings */
+}
+
+h2 {
+margin-top:20px;
+  font-size:20px;
+  font-family: "Merriweather", Georgia, "Times New Roman", serif;
+  font-weight: 500; /* bold for headings */
+}
+
+h3 {
+margin-top:15px;
+  font-size: 15px;
+  font-family: "Merriweather", Georgia, "Times New Roman", serif;
+  font-weight: 300; /* bold for headings */
+}
+
+
+
+
+
+
+:root{
+  --bg: #E8EBED              ;           /* page background */
+  --text: #000           ;           /* default text color */
+  --muted:            ;           /* subtle text */
+  --surface:          ;           /* cards / panels */
+  --border: none       ;           /* line/border color */
+  --brand:         ;           /* brand color (links/buttons) */
+
+  --surface-rgb: ;                 /* e.g. 255,255,255 or 18,18,18 */
+  --max-w: 1000px;
+  --nav-h: 60px;
+}
+
+/* ============ BASE ============ */
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  /* keep native browser smoothness off for script-driven smooth scroll (your JS) */
+  scroll-behavior: auto;
+  font-family: sans-serif;
+  color: var(--text, #111);
+  background: var(--bg, #fff);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ============ NAVBAR (fixed) ============ */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* semi-transparent bg + blur UNDER it */
+  background:;
+
+  z-index: 999;
+}
+
+.nav__inner {
+  width: 100%;
+  max-width: var(--max-w);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.nav__links { display: flex; gap: 1rem; }
+.nav__link  { padding: 0.5rem; }
+.nav__link.nav__link:hover {
+  color: var(--brand, #000)
+
+.nav--off {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+/* ============ STICKY SUBNAV (section bar) ============ */
+.stickybar {
+  position: sticky;
+  top: 0;
+
+  /* same translucent look as main nav + blur */
+  background: rgba(var(--surface-rgb, 255,255,255), var(--nav-alpha, .8));
+  -webkit-backdrop-filter: blur(var(--nav-blur, 10px));
+  backdrop-filter: blur(var(--nav-blur, 10px));
+
+  border-bottom: 1px solid var(--border, #ccc);
+  padding: 0.5rem 1rem;
+  z-index: 998;
+}
+
+.stickybar__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.stickybar__links { display: flex; gap: .5rem; }
+
+/* ============ LAYOUT ============ */
+.section {
+  min-height: 100vh;
+  padding: calc(var(--nav-h) + 20px) 1rem 40px; /* space for fixed nav */
+}
+
+.wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+/* ============ DROPDOWNS ============ */
+.dropdown { position: relative; }
+.dropdown__toggle { cursor: pointer; background: none; border: none; padding: 0.5rem; }
+
+.dropdown__menu {
+  position: absolute;
+  top: 100%; left: 0;
+  background: var(--surface, #fff);
+  border: 1px solid var(--border, #ccc);
+  display: none;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+.dropdown.open .dropdown__menu { display: flex; }
+.dropdown__item { padding: .5rem .75rem; }
+
+/* ============ FULL-WIDTH IMAGE ============ */
+.fullwidth-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-width: 100vw;  /* prevent horizontal scroll */
+  min-width: 100vw;  /* (fixed: was "minimum-width") */
+}
+
+/* ============ VIDEO WRAPPER ============ */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  margin-top: 1rem;
+  background: #000; /* safeguard letterboxing */
+}
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ============ FOOTER ============ */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--surface, #eee);
+  color: var(--muted, #333);
+}
+
